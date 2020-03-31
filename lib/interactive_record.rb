@@ -25,6 +25,10 @@ class InteractiveRecord
     end
   end
 
+  def save
+    sql = "INSERT INTO #{table_name_for_insert}"
+  end
+
   def table_name_for_insert
     self.class.table_name
   end
@@ -40,5 +44,7 @@ class InteractiveRecord
     end
     values.join(", ")
   end
+
+
 
 end
